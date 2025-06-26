@@ -1,7 +1,6 @@
 import React ,{useState,useEffect} from 'react'
 import History from './History.jsx'
 import ExpenseForm from './ExpenseForm.jsx'
-import {v4 as uid} from "uuid";
  import "../index.css";
 import BalanceContainer from './BalanceContainer.jsx';
 
@@ -66,7 +65,7 @@ function ExpenseContainer() {
 
     const deleteExpense = async (id) => {
     try {
-      const response = await fetch(`http://localhost:4000/expense/${id}`, {
+      const response = await fetch(`https://expense-backend-2oul.onrender.com/expense${id}`, {
         method: 'DELETE',
       });
 
